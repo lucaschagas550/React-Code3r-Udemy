@@ -1,23 +1,10 @@
-import './index.css';
-import React from 'react'; //JSX Precisa deste import
-import ReactDOM from 'react-dom/client';
+import "./index.css";
+import React from "react"; //JSX Precisa deste import
+import ReactDOM from "react-dom/client";
 
-import Primeiro from './components/basicos/Primeiro'; 
-import ComParametro from './components/basicos/ComParametro';
-import Fragmento from './components/basicos/Fragmento';
+import App from "./App.jsx";
 
-const el = document.getElementById('root');
+const el = document.getElementById("root");
 
 const root = ReactDOM.createRoot(el);
-root.render(
-    <div>
-        <Fragmento />
-        <Primeiro />
-        <ComParametro 
-            titulo="Segundo Componente" 
-            subtitulo="Muito legal!"
-            nota={9.3}/>
-        <h1>Olá, React!</h1>
-    </div>
-);
-
+root.render(<App />);
