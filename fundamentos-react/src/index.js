@@ -4,12 +4,14 @@ import ReactDOM from 'react-dom/client';
 
 import Primeiro from './components/basicos/Primeiro'; 
 import ComParametro from './components/basicos/ComParametro';
+import Fragmento from './components/basicos/Fragmento';
 
 const el = document.getElementById('root');
 
 const root = ReactDOM.createRoot(el);
 root.render(
     <div>
+        <Fragmento />
         <Primeiro />
         <ComParametro 
             titulo="Segundo Componente" 
