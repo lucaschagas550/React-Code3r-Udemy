@@ -1,3 +1,11 @@
+import React from 'react'; //JSX Precisa deste import
+
 export default function Primeiro() {
-    return 'Primeiro Componente';
+    const msg = 'seja bem vindo';
+    return (
+        <div>
+            <h2>Primeiro componente</h2>
+            <h2>{msg}</h2>
+        </div>
+    );
 }
