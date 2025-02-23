@@ -4,9 +4,11 @@ import FamiliaMembro from './FamiliaMembro'
 export default (props) =>{
     return(
     <div>
-        <FamiliaMembro nome='Pedro' sobrenome={props.sobrenome} />
-        <FamiliaMembro nome='Luis' {...props}/>
-        <FamiliaMembro nome='Ana' sobrenome={props.sobrenome}/>
+        {
+            React.Children.map(props.children, (child) => {
+                return React.cloneElement(child, props)
+            })
+        }
     </div>
     );
 }
