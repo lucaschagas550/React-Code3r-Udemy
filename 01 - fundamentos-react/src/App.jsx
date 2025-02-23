@@ -23,9 +23,8 @@ export default () => (
       </Card>
 
       <Card titulo="#02 - Com parametro">
-        <NumeroAleatorio numeroMinimo={1} numeroMaximo={10}/>
-        <NumeroAleatorio numeroMinimo={1} numeroMaximo={10}/>
-        <NumeroAleatorio numeroMinimo={1} numeroMaximo={10}/>
+        <ComParametro titulo='Aluno' subtitulo='Teste' nota={8}/>
+        <ComParametro titulo='Aluno' subtitulo='Teste' nota={8}/>
       </Card>
 
       <Card titulo="#01 - Primeiro Componente">
