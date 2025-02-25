@@ -16,6 +16,7 @@ import ParOuImpar from "./components/condicional/ParOuImpar";
 import UsuarioInfo from "./components/condicional/UsuarioInfo";
 
 import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
 
 export default () => (
   <div className="App">
@@ -23,6 +24,10 @@ export default () => (
     
     <div className="Cards">
       
+      <Card titulo="#10 - Comunicação Indireta" color="#8BAD39">
+        <IndiretaPai></IndiretaPai>
+      </Card>
+
       <Card titulo="#09 - Comunicação Direta" color="#59323C">
         <DiretaPai></DiretaPai>
       </Card>
