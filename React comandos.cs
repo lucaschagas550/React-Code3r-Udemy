@@ -1,6 +1,9 @@
 //Baixa as dependencias somente local, sem ser algo global
 npx create-raect-app [nome do projeto]
 
+//Baixar as dependencias de um projeto novo, apos isso executar o npm start
+npm install
+
 //Inicia o Projeto
 npm start
 
