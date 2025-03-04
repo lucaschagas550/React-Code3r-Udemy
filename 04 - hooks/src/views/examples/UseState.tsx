@@ -1,15 +1,53 @@
-import React from 'react'
-import PageTitle from '../../components/layout/PageTitle'
+import React, { useState } from "react";
+
+import PageTitle from "../../components/layout/PageTitle";
+import SectionTitle from "../../components/layout/SectionTitle";
 
 const UseState = () => {
-    return (
-        <div className="UseState">
-            <PageTitle
-                title="Hook UseState"
-                subtitle="Estado em componentes funcionais!"
-            />
-        </div>
-    )
-}
+  const [count, setCount] = useState<number>(0);
+  const [name, setName] = useState('');
 
-export default UseState
+  return (
+    <div className="UseState">
+      <PageTitle
+        title="Hook UseState"
+        subtitle="Estado em componentes funcionais!"
+      />
+
+      <SectionTitle title="Exercício #01" />
+      <div className="center">
+        <span className="text">{count}</span>
+        <div>
+          <button className="btn" onClick={() => setCount(count - 1)}>
+            -1
+          </button>
+          <button className="btn" onClick={() => setCount(count + 1)}>
+            +1
+          </button>
+          <button
+            className="btn"
+            onClick={() =>
+              setCount((currect) => {
+                console.log(currect); // Exibe o valor atual antes da atualização
+                return currect + 1000; // Retorna o novo valor atualizado corretamente
+              })
+            }
+          >
+            +1000
+          </button>
+        </div>
+      </div>
+
+      <SectionTitle title="Exercício #02" />
+      <input
+        type="text"
+        className="input"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <span className="text">{name}</span>
+    </div>
+  );
+};
+
+export default UseState;
