@@ -4,6 +4,8 @@ import PageTitle from '../../components/layout/PageTitle'
 import { initialState, reducer } from '../../store'
 import { numberAdd2, login } from '../../store/action'
 
+
+//Pasta Store auxilia na criacao do exemplo abaixo
 const UseReducer = () => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
