@@ -4,6 +4,9 @@ npx create-raect-app [nome do projeto]
 //Cria projeto react com typescript configurado
 npx create-raect-app [nome do projeto] --template typescript
 
+//Cria projeto react next.js configurado
+npx create-next-app fundamentos
+
 //Baixar as dependencias de um projeto novo, apos isso executar o npm start
 npm install
 
@@ -13,6 +16,8 @@ npm i react-router-dom
 
 //Inicia o Projeto
 npm start
+
+npm run dev
 
 npm start
     Starts the development server.
