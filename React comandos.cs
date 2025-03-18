@@ -17,6 +17,7 @@ npm i react-router-dom
 //Inicia o Projeto
 npm start
 
+//NEXT inciar projeto
 npm run dev
 
 npm start
