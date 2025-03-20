@@ -5,6 +5,7 @@ export default function Incio() {
   return (
     <div>
       <Link href="/estiloso">Estiloso</Link>
+      <br />
       <Link href="/exemplo">Exemplo</Link>
       <h1>Inicio</h1>
 
