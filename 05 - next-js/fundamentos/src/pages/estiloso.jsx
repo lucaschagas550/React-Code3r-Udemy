@@ -1,13 +1,13 @@
-import Layout from '@/components/Layout';
-import styles from '../styles/Estiloso.module.css'
-import Link from 'next/link';
+import Layout from '../components/Layout';
+import Styles from '../styles/Estiloso.module.css'
+import Navegador from '../components/Navegador';
 
 export default function Estiloso(){
     return(
-    <div className={styles.roxo}> 
+    <div className={Styles.roxo}> 
         <Layout Titulo="Layout Componente">
             <h1>Estilos usando css modulos</h1>
-            <Link href="/">Incio</Link>
+            <Navegador texto="Incio" destino="/" cor='crimson'/>
         </Layout>
     </div>
     )
