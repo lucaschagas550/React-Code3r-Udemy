@@ -15,6 +15,7 @@ export default function Incio() {
       <Navegador texto="Home" destino="/"/>
       <Navegador texto="Navegação #01" destino="/navegacao" cor='green'/>
       <Navegador texto="Navegação Dinamica #02" destino="/cliente/SP/Jundiaí/123" cor='blue'/>
+      <Navegador texto="Componente com Estado" destino="/estado" cor='pink'/>
       <h1>Inicio</h1>
     </div>
   );
