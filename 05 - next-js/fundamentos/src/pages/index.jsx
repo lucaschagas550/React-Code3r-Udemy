@@ -13,6 +13,7 @@ export default function Incio() {
       <Navegador texto="Estiloso" destino="/estiloso" cor='#9400d3'/>
       <Navegador texto="Exemplo" destino="/exemplo" cor='crimson'/>
       <Navegador texto="Home" destino="/"/>
+      <Navegador texto="Navegação #01" destino="/navegacao" cor='green'/>
       <h1>Inicio</h1>
     </div>
   );
