@@ -14,6 +14,10 @@ npm install
 npm i [nome do pacote]
 npm i react-router-dom
 
+//Instalar o typescript em um projeto react sem ele, para criar as config basta rodar o npm run dev apos instalacao 
+//e precisa existir o arquivo tsconfig.json na raiz do projeto
+npm install --save-dev @types/react typescript
+
 //Inicia o Projeto
 npm start
 
