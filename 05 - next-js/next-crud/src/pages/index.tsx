@@ -1,23 +1,18 @@
 import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Layout from "../components/Layout";
 
 export default function Home() {
   return (
-    <div className={`
-      flex h-screen justify-center items-center
+    <div
+      className={`
+      flex justify-center items-start h-screen
       bg-gradient-to-r from bg-purple-500 to-blue-600
-    `}>
-      <span className="text-4xl">Texto</span>
+      text-white scroll-auto
+    `}
+    >
+      <Layout titulo="Cadastro Simples">
+        <span>Coteudo</span>
+      </Layout>
     </div>
   );
 }
