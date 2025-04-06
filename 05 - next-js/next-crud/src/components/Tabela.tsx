@@ -3,8 +3,8 @@ import { IconeEdicao, IconeLixo } from "./Icones";
 
 interface TabelaProps {
     clientes: Cliente[]
-    clienteSelecionado?: (cliente: Cliente) => void
-    clienteExcluido?: (cliente: Cliente) => void
+    clienteSelecionado?: (cliente: Cliente) => void //Parametro Opcional e retorna um cliente ao clicar no botão de edição
+    clienteExcluido?: (cliente: Cliente) => void //Parametro Opcional e retorna um cliente ao clicar no botão de remover
 }
 
 export default function Tabela(props: TabelaProps) {
@@ -42,6 +42,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.clienteSelecionado ? (
                     <button onClick={() => props.clienteSelecionado?.(cliente)} className={`
                         flex justify-center items-center
+                        cursor-pointer
                         text-green-600 rounded-full p-2 m-1
                         hover:bg-purple-50
                     `}>
@@ -51,6 +52,7 @@ export default function Tabela(props: TabelaProps) {
                 {props.clienteExcluido ? (
                     <button onClick={() => props.clienteExcluido?.(cliente)} className={`
                         flex justify-center items-center
+                        cursor-pointer
                         text-red-500 rounded-full p-2 m-1
                         hover:bg-purple-50
                     `}>
