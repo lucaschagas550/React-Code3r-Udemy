@@ -1,3 +1,4 @@
+import Botao from "../components/Botao";
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 import Cliente from "../core/Cliente";
@@ -10,13 +11,13 @@ export default function Home() {
     new Cliente("Pedro", 54, "4"),
   ];
 
-function selecionarCliente(cliente: Cliente) {
-    console.log(cliente.nome);	
-};
-
-function excluirCliente(cliente: Cliente) {
+  function selecionarCliente(cliente: Cliente) {
     console.log(cliente.nome);
-};
+  }
+
+  function excluirCliente(cliente: Cliente) {
+    console.log(cliente.nome);
+  }
   return (
     <div
       className={`
@@ -26,6 +27,9 @@ function excluirCliente(cliente: Cliente) {
     `}
     >
       <Layout titulo="Cadastro Simples">
+        <div className="flex justify-end">
+          <Botao cor="green" className="mb-4">Novo Cliente</Botao>
+        </div>
         <Tabela
           clientes={clientes}
           clienteSelecionado={selecionarCliente}

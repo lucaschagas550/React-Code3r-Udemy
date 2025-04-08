@@ -35,3 +35,11 @@ npm start
 
   npm run eject
     Removes this tool and copies build dependencies, configuration files and scripts into the app directory. If you do this, you can’t go back
+
+
+//PRODUCAO
+  npm run build
+    Bundles the app into static files in production.
+
+  npx next start
+    Executa os arquivos gerados no build e consegue simular o ambiente de producao

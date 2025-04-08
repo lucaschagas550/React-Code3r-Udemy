@@ -3,7 +3,7 @@ import Titulo from "./Titulo";
 
 interface LayoutProps {
   titulo: string;
-  children: ReactNode;
+  children: ReactNode; //children é o que vai ser renderizado dentro do layout
 }
 
 export default function Layout(props: LayoutProps) {
