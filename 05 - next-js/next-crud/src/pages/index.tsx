@@ -1,15 +1,24 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Botao from "../components/Botao";
 import Formulario from "../components/Formulario";
 import Layout from "../components/Layout";
 import Tabela from "../components/Tabela";
 import Cliente from "../core/Cliente";
+import ClienteRepositorio from "../core/ClienteRepositorio";
+import ColecaoCliente from "../backend/db/ColecaoCliente";
 
 export default function Home() {
-  
+  const repo: ClienteRepositorio = new ColecaoCliente();
+
   const [cliente, setCliente] = useState<Cliente>(Cliente.vazio());
+  // const [clientes, setClientes] = useState<Cliente[]>([]);
   const [visivel, setVisivel] = useState<"tabela" | "form">("tabela");
 
+  // useEffect(() => {
+  //   repo.obterTodos().then(setClientes);
+  // }, []);
+
+  
   const clientes = [
     new Cliente("Ana", 34, "1"),
     new Cliente("Bia", 45, "2"),
@@ -38,7 +47,6 @@ export default function Home() {
     setVisivel("tabela"); // Volta a exibir a tabela após salvar
   }
 
-
   return (
     <div
       className={`
@@ -51,11 +59,7 @@ export default function Home() {
         {visivel === "tabela" ? (
           <>
             <div className="flex justify-end">
-              <Botao
-                cor="green"
-                className="mb-4"
-                onClick={() => novoCliente()}
-              >
+              <Botao cor="green" className="mb-4" onClick={() => novoCliente()}>
                 Novo Cliente
               </Botao>
             </div>
